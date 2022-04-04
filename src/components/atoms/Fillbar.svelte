@@ -2,10 +2,13 @@
     export let emptyColor;
     export let percentage;
     export let fillColor;
+    
+    const emptyBarStyle = `--emptyColor:${emptyColor};`
+    const fillBarStyle = `--percentage: ${percentage}%; --fillColor: ${fillColor}`
 </script>
 
-<div id="fill-bar" style="--emptyColor:{emptyColor};">
-    <div style="--percentage: {percentage}%; --fillColor: {fillColor}"></div>
+<div id="fill-bar" style={emptyBarStyle}>
+    <div style={fillBarStyle}></div>
 </div>
 
 <style lang="scss">

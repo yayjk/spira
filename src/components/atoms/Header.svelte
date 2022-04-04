@@ -10,7 +10,8 @@
 </div>
 
 <style lang="scss">
-
+    @import '../../styles/variables';
+    
     #container{
         display: flex;
         justify-content: space-between;
@@ -23,7 +24,7 @@
         }
 
         a {
-            color: #443FF0;
+            color: $link-blue;
             text-decoration: none;
             font-weight: 500;
         }
