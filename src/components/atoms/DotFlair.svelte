@@ -6,6 +6,12 @@
 
   export let position;
   export let theme;
+  export let width = "8px";
+  export let height = "8px";
+  export let borderRadius = "5px";
+  export let marginBottom = "2px";
+  export let marginRight = "2px";
+  let indStyle = `width: ${width}; height: ${height}; border-radius: ${borderRadius}; margin-right: ${marginRight}; margin-bottom: ${marginBottom};`;
   let containerStyle = "";
 
   switch (position) {
@@ -38,7 +44,7 @@
   {#each xFlairMatrix as x}
     <div class="flairTwoIndContainer">
       {#each yFlairMatrix as y}
-        <div class="flairTwoInd {themeClass}" />
+        <div class="flairTwoInd {themeClass}" style={indStyle} />
       {/each}
     </div>
   {/each}
@@ -53,13 +59,8 @@
       display: flex;
       flex-direction: row;
 
-      .flairTwoInd {
-        width: 8px;
-        height: 8px;
-        border-radius: 5px;
-        margin-right: 2px;
-        margin-bottom: 2px;
-      }
+      // .flairTwoInd {
+      // }
 
       .primary {
         background-color: $flair-blue;

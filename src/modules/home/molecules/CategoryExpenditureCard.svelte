@@ -51,6 +51,8 @@
   <CircleFlair
     position={circlePosition}
     theme={isSecondary ? Theme.SECONDARY : Theme.PRIMARY}
+    height="50%"
+    width="30%"
   />
 
   <DotFlair
