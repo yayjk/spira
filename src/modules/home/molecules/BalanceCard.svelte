@@ -1,8 +1,8 @@
-<script>
-  import CoreUtils from '@/core/utils';
-  import { Positions, Theme } from '@/core/types';
-  import CircleFlair from '@/components/atoms/CircleFlair.svelte';
-  import DotFlair from '@/components/atoms/DotFlair.svelte';
+<script lang="ts">
+  import CoreUtils from "@/core/utils";
+  import { Positions, Theme } from "@/core/types";
+  import CircleFlair from "@/components/atoms/CircleFlair.svelte";
+  import DotFlair from "@/components/atoms/DotFlair.svelte";
 
   export let balance;
 </script>
@@ -15,7 +15,7 @@
 </div>
 
 <style lang="scss">
-  @import './src/styles/variables';
+  @import "./src/styles/variables";
 
   #container {
     position: relative;
@@ -23,8 +23,6 @@
     background-color: $primary;
     padding: 32px;
     padding-left: 48px;
-    margin-bottom: 16px;
-    margin-top: 24px;
     overflow: hidden;
 
     h1 {

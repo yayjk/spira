@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Header from '@/components/atoms/Header.svelte';
+  import Header from "@/components/atoms/Header.svelte";
 </script>
 
 <div id="container">
@@ -7,7 +7,4 @@
 </div>
 
 <style lang="scss">
-  #container {
-    margin-top: 1em;
-  }
 </style>

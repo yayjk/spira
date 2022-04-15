@@ -1,12 +1,12 @@
-<script>
-  import CoreUtils from '../../core/utils';
+<script lang="ts">
+  import CoreUtils from "../../core/utils";
   const xFlairMatrix = CoreUtils.getNumberArray(5);
   const yFlairMatrix = CoreUtils.getNumberArray(6);
-  import { Positions, Theme } from '../../core/types';
+  import { Positions, Theme } from "../../core/types";
 
   export let position;
   export let theme;
-  let containerStyle = '';
+  let containerStyle = "";
 
   switch (position) {
     case Positions.BOTTOM_LEFT: {
@@ -31,7 +31,7 @@
     }
   }
 
-  $: themeClass = theme === Theme.PRIMARY ? 'primary' : 'secondary'
+  $: themeClass = theme === Theme.PRIMARY ? "primary" : "secondary";
 </script>
 
 <div id="flairTwoContainer" style={containerStyle}>
@@ -45,7 +45,7 @@
 </div>
 
 <style lang="scss">
-  @import '../../styles/variables';
+  @import "../../styles/variables";
   #flairTwoContainer {
     position: absolute;
 
@@ -65,7 +65,7 @@
         background-color: $flair-blue;
       }
 
-      .secondary{
+      .secondary {
         background-color: $flair-orange;
       }
     }
