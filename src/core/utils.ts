@@ -36,6 +36,14 @@ export default class CoreUtils {
     return `₹ ${val}`
   } 
 
+  static getNumberArray(length: number) {
+    const arr = new Array(length)
+    for(let i = 0; i < length; i++){
+      arr[i] = i+1
+    }
+    return arr
+  }
+
   private static chunkSubstr(str, size) {
     const numChunks = Math.ceil(str.length / size)
     const chunks = new Array(numChunks)

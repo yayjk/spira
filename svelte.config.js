@@ -9,5 +9,5 @@ export default {
       sync: true,
       implementation: sass,
     },
-  })
+  }),
 }

@@ -1,5 +1,8 @@
 <script>
-  import CoreUtils from '../../core/utils';
+  import CoreUtils from '@/core/utils';
+  import { Positions, Theme } from '@/core/types';
+  import CircleFlair from '@/components/atoms/CircleFlair.svelte';
+  import DotFlair from '@/components/atoms/DotFlair.svelte';
 
   export let balance;
 </script>
@@ -7,11 +10,12 @@
 <div id="container">
   <h1>{CoreUtils.formatMoney(balance)}</h1>
   <p>Total Balance</p>
-  <div id="flair"/>
+  <CircleFlair position={Positions.TOP_LEFT} theme={Theme.PRIMARY} />
+  <DotFlair position={Positions.BOTTOM_RIGHT} theme={Theme.PRIMARY} />
 </div>
 
 <style lang="scss">
-  @import '../../styles/variables';
+  @import './src/styles/variables';
 
   #container {
     position: relative;
@@ -37,18 +41,6 @@
       color: $gray;
       position: relative;
       z-index: 2;
-    }
-
-    #flair {
-      position: absolute;
-      width: 23%;
-      height: 50%;
-      border-color: $flair-blue;
-      border-width: 12px;
-      border-style: solid;
-      border-radius: 1000px;
-      top: -10%;
-      left: -10%;
     }
   }
 </style>

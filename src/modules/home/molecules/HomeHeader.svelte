@@ -1,5 +1,5 @@
 <script>
-  import CoreUtils from '../../core/utils';
+  import CoreUtils from '@/core/utils';
   const greetingMessage = CoreUtils.getGreetingsMessage();
 </script>
 
@@ -14,7 +14,7 @@
 </div>
 
 <style lang="scss">
-  @import '../../styles/variables';
+  @import './src/styles/variables';
 
   #container {
     display: flex;
